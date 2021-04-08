@@ -12,11 +12,14 @@ class MarkdownPreview extends React.Component{
     render(){
         var changeWindowSize = this.props.changeWindowSize;
         
-        return(<div id="preview">
-        <Navbar title = {'Preview'} width = {this.state.textarea_width} changeWindowSize = {changeWindowSize}/>
-        <div dangerouslySetInnerHTML={{__html: marked(this.props.value)}}/>
-            
-        </div>);
+        return(
+            <div id="preview-well">
+                <Navbar title = {'Preview'} width = {this.state.textarea_width} changeWindowSize = {changeWindowSize}/>
+                <div id="preview">
+                    <div dangerouslySetInnerHTML={{__html: marked(this.props.value,{breaks: true})}}/>
+                </div>
+            </div>
+        );
     }
 }
 

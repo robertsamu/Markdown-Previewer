@@ -11,8 +11,8 @@ class Navbar extends React.Component{
         var changeWindowSize = this.props.changeWindowSize;
         return (
             <div className = "Navbar">
-                {this.props.title} 
-                <button className = "Nav-Button" onClick={() => changeWindowSize(this.props.title)}><i class="fa fa-arrows-alt" ></i></button>
+                <p>{this.props.title}</p> 
+                <button className = "Nav-Button" onClick={() => changeWindowSize(this.props.title)}><i className="fa fa-arrows-alt" ></i></button>
             </div>
         );
     }

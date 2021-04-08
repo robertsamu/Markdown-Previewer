@@ -29,7 +29,7 @@ class InputWell extends React.Component{
     render(){
         if(this.state.active_window === "both")
         return(
-            <div>
+            <div className="Wells">
                 <div className = "editor">
                     <Navbar title = {'Editor'} 
                             width = {this.state.textarea_width} 
@@ -42,7 +42,7 @@ class InputWell extends React.Component{
         );
         else if(this.state.active_window === 'Editor') {
             return(
-                <div className = "editor">
+                <div className = "editor Full" id="editor">
                     <Navbar title = {'Editor'} 
                             width = {this.state.textarea_width} 
                             changeWindowSize = {this.changeWindowSize.bind(this)}
@@ -52,7 +52,11 @@ class InputWell extends React.Component{
             );
         }
         else{
-            return(<MarkdownPreview value = {this.state.input_text} changeWindowSize = {this.changeWindowSize.bind(this)}/>);
+            return(
+            <div className="Full">
+                <MarkdownPreview value = {this.state.input_text} changeWindowSize = {this.changeWindowSize.bind(this)}/>
+            </div>
+            );
         }
     }
 }

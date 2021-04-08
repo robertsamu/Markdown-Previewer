@@ -1,8 +1,140 @@
+:root{
+    background-image: linear-gradient( 135deg, #f0b3f5 10%, #1904E5 100%);
+    background-repeat: repeat-y;
+    background-size: 100% 300vh;
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Wells{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.editor{
+    margin-right: 40px;
+    margin-left: 40px;
+    
+}
+
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    
+    height: 30px;
+    background-color:rgb(67, 49, 114);
+    color: white;
+    padding-left: 10px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius: 8px 8px 0px 0px;
+}
+.Navbar button{
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    color: white;
+}
+.fa{
+    font-size:20px;
+    text-align: center;
+}
+
 textarea{
-    width: 500px;
     max-width: 500px;
-    min-width: 500px;
-    height: 600px;
-    max-height: 600px;
-    min-height: 600px;
+    width: 300px;
+    height: 60vh;
+    min-width: 220px;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: white;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 20px 20px;
+    padding: 10px;
+}
+#preview{
+    min-width: 300px !important;
+    padding: 20px;
+}
+#preview-well{
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, 0.356);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.Full #preview-well{
+    width: 99%;
+    max-width: 99%;
+    padding: 0px;
+    
+}
+h1{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    color: white;
+    font-size: 80px;
+    text-shadow: 4px 4px 4px #4d0d774d;
+}
+.Full{
+    width: 96%;
+}
+.Full textarea{
+    width: 99%;
+    max-width: 99%;
+    padding: 0px;
+}
+#editor .Navbar{
+    max-width: 99%;
+}
+.background-el{
+    position: absolute;
+    top: 400px;
+    left: 10px;
+        max-width: 600px;
+        width: 450px;
+        min-width: 200px;
+        height: 305px;
+        background: #f09;
+        background-image: linear-gradient(
+    201deg
+    , #3023AE 0%, #f09 100%);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        box-shadow: -10vmin 10vmin 20px rgb(255 255 255 / 7%);
+    z-index: -10;
+}
+
+.background-text-el{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    font-size: 100px;
+    color: white;
+    z-index: -11;
+    opacity: 1;
+    animation: fade 10s infinite;
+}
+
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+#background-elements{
+    width: 100%;
 }
