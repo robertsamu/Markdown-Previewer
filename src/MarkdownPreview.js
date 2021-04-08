@@ -1,13 +1,21 @@
 import React from 'react';
 import marked from 'marked';
+import Navbar from "./Navbar";
 
 class MarkdownPreview extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            textarea_width: '10px'
+        }
     }
     render(){
+        var changeWindowSize = this.props.changeWindowSize;
+        
         return(<div id="preview">
-        {marked("#A##B ```abcdefgh```[links](https://www.freecodecamp.com)`asdasdasda`- And of course there are lists.- Some are bulleted.asdas- With different indentation levels.- That look like this.> Block Quotes!asdasd**bold**![asdas](https://upload.wikimedia.org/wikipedia/commons/5/5e/ANA_flag_%282017%29.svg)")}
+        <Navbar title = {'Preview'} width = {this.state.textarea_width} changeWindowSize = {changeWindowSize}/>
+        <div dangerouslySetInnerHTML={{__html: marked(this.props.value)}}/>
+            
         </div>);
     }
 }
