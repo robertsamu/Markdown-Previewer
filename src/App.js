@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
-import InputWell from "./InputWell";
-import BackgroundBubbles from "./BackgroundBubbles";
+import InputWell from "./components/InputWell";
+import BackgroundBubbles from "./components/BackgroundBubbles";
 
 class App extends React.Component {
   // constructor(props){
