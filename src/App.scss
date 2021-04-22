@@ -35,7 +35,7 @@
     background-color:rgb(67, 49, 114);
     color: white;
     padding-left: 10px;
-    padding-right: 8px;
+    padding-right: 10px;
     text-align: center;
     border-radius: 8px 8px 0px 0px;
 }
@@ -62,7 +62,6 @@ textarea{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 0px 0px 20px 20px;
-    padding: 10px;
 }
 #preview{
     min-width: 300px !important;
@@ -83,12 +82,16 @@ textarea{
     padding: 0px;
     
 }
-h1{
+.header{
     margin-top: 60px;
     margin-bottom: 80px;
     color: white;
     font-size: 80px;
     text-shadow: 4px 4px 4px #4d0d774d;
+}
+code{
+    background-color: azure;
+    color: cadetblue;
 }
 .Full{
     width: 96%;
@@ -96,10 +99,18 @@ h1{
 .Full textarea{
     width: 99%;
     max-width: 99%;
-    padding: 0px;
+    min-width: 99%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 0px;
+    border-right: 0px;
 }
+
 #editor .Navbar{
     max-width: 99%;
+    min-width: 99%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .background-el{
     position: absolute;
@@ -107,7 +118,7 @@ h1{
     left: 10px;
         max-width: 600px;
         width: 450px;
-        min-width: 200px;
+        min-width: 0px;
         height: 305px;
         background: #f09;
         background-image: linear-gradient(

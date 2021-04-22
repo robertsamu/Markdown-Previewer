@@ -6,7 +6,7 @@ class InputWell extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            input_text: "#A\n##B\n```abcdefgh```",
+            input_text: "# Welcome to my React Markdown Previewer!\n## This is a sub-heading...\n### And here's some other cool stuff:\nHeres some code, `<div></div>`, between 2 backticks.You can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.",
             textarea_width: '10px',
             active_window: "both"
         }
@@ -14,7 +14,7 @@ class InputWell extends React.Component{
     }
 
     handleChange(event){
-        console.log(event)
+        //console.log(event)
         this.setState({
             input_text: event.target.value
         })
@@ -27,6 +27,7 @@ class InputWell extends React.Component{
     }
 
     render(){
+
         if(this.state.active_window === "both")
         return(
             <div className="Wells">
